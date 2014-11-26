@@ -16,7 +16,7 @@ daemon() {
             /bin/bash $dropbox_uploader -s -q upload $capture_dir/. .
             chsum1=$chsum2
             #Note the line below expects that the user running this script as sudo access w/o pw
-            sudo -u motion find $capture_dir -type f -mmin 10 -exec rm {} \;
+            sudo -u motion find $capture_dir -type f -mmin +10 -exec rm {} \;
         fi
         sleep 2
     done
