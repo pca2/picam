@@ -1,3 +1,4 @@
+#email list should be comma separated list.
 email_list=''
 capture_dir='/home/pi/capture'
 dropbox_uploader=$DIR/dropbox_uploader.sh
