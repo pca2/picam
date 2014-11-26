@@ -9,6 +9,6 @@ then
   echo "PID running. All is well."
 else
   echo "PID not found. Starting watch script now."
-  /bin/bash watch.sh &
+  /bin/bash /home/pi/picam/watch.sh &
   echo $! > $pid_file_location
 fi
