@@ -16,9 +16,9 @@ daemon() {
       /usr/bin/python $pymail $image_dir            
       chsum1=$chsum2
       #Note the line below expects that the user running this script as sudo access w/o pw
-      sudo -u motion find $capture_dir/* -mmin +3 -exec rm -rf {} \;
+      sudo -u motion find $capture_dir/* -mmin +1 -exec rm -rf {} \;
     fi
-    sleep 2
+    sleep 20
   done
 }
 daemon
