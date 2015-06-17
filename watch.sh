@@ -14,9 +14,9 @@ daemon() {
       image_dir=$(ls -t $capture_dir | head -n 1)
       echo "change detected" | logger -t watch
       /usr/bin/python $pymail $image_dir            
-      chsum1=$chsum2
       #Note the line below expects that the user running this script as sudo access w/o pw
       sudo -u motion find $capture_dir/* -mmin +1 -exec rm -rf {} \;
+      chsum1=`find $capture_dir -type f -exec md5sum {} \;`
     fi
     sleep 20
   done
