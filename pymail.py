@@ -13,6 +13,7 @@ image_dir = str(sys.argv[1])
 #Set up crap for the attachments
 files = "/home/pi/capture/" + image_dir
 filenames = [os.path.join(files, f) for f in os.listdir(files)]
+filenames.sort()
 #print filenames
 
 
